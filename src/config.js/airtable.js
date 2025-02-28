@@ -8,4 +8,12 @@ const airtableClient = axios.create({
   },
 });
 
+airtableClient.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    console.error("API call error:", error);
+    return Promise.reject(error);
+  }
+);
+
 export default airtableClient;
