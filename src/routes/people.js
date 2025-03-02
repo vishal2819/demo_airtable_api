@@ -1,5 +1,6 @@
 import * as RecordsController from '../controllers/recordsController.js';
 
+import config from '../config/index.js';
 import express from 'express';
 import { validateAuth } from '../middleware/auth.js';
 
